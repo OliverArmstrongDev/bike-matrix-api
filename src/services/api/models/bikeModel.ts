@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 interface IBike {
     brand: string;
-    bikeModel: string;
+    modelName: string;
     year: string;
     email: string;
 }
@@ -13,7 +13,7 @@ const bikeSchema = new mongoose.Schema<IBike>(
             type: String,
             required: true
         },
-        bikeModel: {
+        modelName: {
             type: String,
             required: true
         },
