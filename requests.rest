@@ -1,0 +1,93 @@
+
+### API SERVER
+
+GET http://localhost:4000/api/bikes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmQ3ZmRhM2Y1ZDY1MzkwODI2Y2M4YTYiLCJuYW1lIjoiSmltIiwiZW1haWwiOiJqaW1AaGVyZS5jb20iLCJpYXQiOjE3MjU0NTU4ODUsImV4cCI6MTcyNTQ2MzA4NX0.l8gHQgQWqKmkaQ60BKrGS08poIO0g510jTNlFai7H20
+
+###
+
+GET http://localhost:4000/api/bikes/66d7a020b2fcf94d62e23b7e
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmQ3ZmRhM2Y1ZDY1MzkwODI2Y2M4YTYiLCJuYW1lIjoiSmltIiwiZW1haWwiOiJqaW1AaGVyZS5jb20iLCJpYXQiOjE3MjU0NTU4ODUsImV4cCI6MTcyNTQ2MzA4NX0.l8gHQgQWqKmkaQ60BKrGS08poIO0g510jTNlFai7H20
+
+###
+
+DELETE  http://localhost:4000/api/bikes/66d7a020b2fcf94d62e23b7e
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmQ3ZmRhM2Y1ZDY1MzkwODI2Y2M4YTYiLCJuYW1lIjoiSmltIiwiZW1haWwiOiJqaW1AaGVyZS5jb20iLCJpYXQiOjE3MjU0NTU4ODUsImV4cCI6MTcyNTQ2MzA4NX0.l8gHQgQWqKmkaQ60BKrGS08poIO0g510jTNlFai7H20
+
+
+### EDIT
+
+
+PUT  http://localhost:4000/api/bikes/66d82801aeff297a734319e7
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmQ3ZmRhM2Y1ZDY1MzkwODI2Y2M4YTYiLCJuYW1lIjoiSmltIiwiZW1haWwiOiJqaW1AaGVyZS5jb20iLCJpYXQiOjE3MjU0NTU4ODUsImV4cCI6MTcyNTQ2MzA4NX0.l8gHQgQWqKmkaQ60BKrGS08poIO0g510jTNlFai7H20
+Content-Type: application/json
+
+{
+    "brand": "Avanti",
+    "model": "Er458",
+    "year": "2024-01-02",
+    "email": "user1@here.com"
+}
+### NEW
+
+
+POST  http://localhost:4000/api/bikes 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmQ3ZmRhM2Y1ZDY1MzkwODI2Y2M4YTYiLCJuYW1lIjoiSmltIiwiZW1haWwiOiJqaW1AaGVyZS5jb20iLCJpYXQiOjE3MjU0NTU4ODUsImV4cCI6MTcyNTQ2MzA4NX0.l8gHQgQWqKmkaQ60BKrGS08poIO0g510jTNlFai7H20
+Content-Type: application/json
+
+{
+    "brand": "Avanti",
+    "model": "Er45",
+    "year": "2024-01-02",
+    "email": "user1@herecom"
+}
+
+
+
+### AUTH SERVER
+
+
+GET  http://localhost:4001/api/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmQ3ZmRhM2Y1ZDY1MzkwODI2Y2M4YTYiLCJuYW1lIjoiSmltIiwiZW1haWwiOiJqaW1AaGVyZS5jb20iLCJpYXQiOjE3MjU0NTU4ODUsImV4cCI6MTcyNTQ2MzA4NX0.l8gHQgQWqKmkaQ60BKrGS08poIO0g510jTNlFai7H20
+
+
+GET  http://localhost:4001/api/users/66d1bd80b57115fd2910008a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmQ3ZmRhM2Y1ZDY1MzkwODI2Y2M4YTYiLCJuYW1lIjoiSmltIiwiZW1haWwiOiJqaW1AaGVyZS5jb20iLCJpYXQiOjE3MjU0NTU4ODUsImV4cCI6MTcyNTQ2MzA4NX0.l8gHQgQWqKmkaQ60BKrGS08poIO0g510jTNlFai7H20
+
+###
+
+POST  http://localhost:4001/api/signup 
+Content-Type: application/json
+
+{
+    "name": "Jim",
+    "email": "jim@here.com",
+    "password": "#123"
+}
+
+###
+
+
+POST  http://localhost:4001/api/login 
+Content-Type: application/json
+
+{
+    "email": "jim@here.com",
+    "password": "#123"
+}
+###
+
+POST  http://localhost:4001/api/token 
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmQxYmQ4MGI1NzExNWZkMjkxMDAwOGEiLCJuYW1lIjoiSmltIiwiZW1haWwiOiJqaW1AaGVyZS5jb20iLCJpYXQiOjE3MjUyODAxNDAsImV4cCI6MTcyNzg3MjE0MH0.VGOYAoMmR0zEgJMdabYCQIKbsc-gu9jAvRaekhCnx-k"
+}
+###
+
+DELETE   http://localhost:4001/api/logout 
+Content-Type: application/json
+
+{
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmQxYmQ4MGI1NzExNWZkMjkxMDAwOGEiLCJuYW1lIjoiSmltIiwiZW1haWwiOiJqaW1AaGVyZS5jb20iLCJpYXQiOjE3MjUyODAxNDAsImV4cCI6MTcyNzg3MjE0MH0.VGOYAoMmR0zEgJMdabYCQIKbsc-gu9jAvRaekhCnx-k"
+}

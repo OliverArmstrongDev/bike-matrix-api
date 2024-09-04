@@ -1,0 +1,16 @@
+{
+    "configurations": [
+    {
+        "command": "npm run startAuth",
+        "name": "Run npm startAuth",
+        "request": "launch",
+        "type": "node-terminal"
+    },
+    {
+        "command": "npm run startApi",
+        "name": "Run npm startApi",
+        "request": "launch",
+        "type": "node-terminal"
+    },
+    ]
+}
