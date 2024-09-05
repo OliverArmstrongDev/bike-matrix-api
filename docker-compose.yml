@@ -1,0 +1,17 @@
+version: "3.8"  
+
+services:
+  react-api:
+    build: 
+      context: .  
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"  
+    environment:
+      - NODE_ENV=development
+    networks:
+      - matrix
+
+networks:
+  matrix:
+    driver: bridge
